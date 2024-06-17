@@ -72,8 +72,12 @@
         function update() {
           //* Your Code to Increase positionX by 10 HERE */
           //Frame 1
+          if (posotionX = 50) {
+           boardWidth = 200
+           speed = 100
+          }
           console.log(75)
-          positionX = positionX + 10;
+          positionX = positionX + speed;
           moveBoxTo(positionX);
         }
 
@@ -85,6 +89,7 @@
         function handleBoxClick() {
           positionX = 0;
           points = points + 1;
+          speed = speed + 3;
           changeBoxText(points);
         }
       })();

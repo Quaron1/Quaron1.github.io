@@ -72,15 +72,13 @@
         function update() {
           //* Your Code to Increase positionX by 10 HERE */
           //Frame 1
-          if (posotionX = 50) {
-           boardWidth = 200
-           speed = 100
+          if (positionX > boardWidth) {
+           speed = -speed;
           }
-          console.log(75)
           positionX = positionX + speed;
           moveBoxTo(positionX);
         }
-
+          if (positionX < 0)
         /* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to

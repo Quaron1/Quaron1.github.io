@@ -70,17 +70,34 @@ function handleStatic (data) {
   /////////////////////////////////////////////////
 
   function staticDisplay() {
+    
     // TODO 3-b: call your handleStatic function
+    handleStatic (dataShapes[currentIndex]);
   }
 
+  
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
+   let currentShape = dataShapes[currentIndex];
+   handleGood (currentShape.color, currentShape.shape, currentShape.repeat);
+  }
+  function handleGood (color, shape, repeat) {
+    setBackgroundWithSimple (color, shape, repeat);
+    animationDetails.DisplayType = 2;
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
+    let currentShape = dataShapes[currentIndex];
+    let repeat = currentShape.repeat;
+    handleBad(currentShape, repeat);
   }
 
+  function handleBad (data, repeat) {
+    repeat += 1;
+    setBackgroundWithMixed(data.color, dataShapes, repeat);
+    animationDetails.displayType = 3;
+  }
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
   /////////////////////////////////////////////////

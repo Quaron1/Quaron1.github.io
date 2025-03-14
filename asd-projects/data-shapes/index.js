@@ -86,18 +86,19 @@ function handleStatic (data) {
     animationDetails.DisplayType = 2;
   }
 
-  function badDisplay() {
+  function badDispay() {
     // TODO 5-b: call your handleBad function
     let currentShape = dataShapes[currentIndex];
     let repeat = currentShape.repeat;
     handleBad(currentShape, repeat);
   }
 
-  function handleBad (data, repeat) {
-    repeat += 1;
-    setBackgroundWithMixed(data.color, dataShapes, repeat);
+  function handleBad(data, repeat) {
+    repeat +- 1;
+    setBackgroundWithMixed(data.color, data.shapes, repeat);
     animationDetails.displayType = 3;
   }
+
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
   /////////////////////////////////////////////////
